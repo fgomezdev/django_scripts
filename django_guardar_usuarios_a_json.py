@@ -12,7 +12,7 @@ for user in usuarios:
     user_data.pop("last_login", None) 
     user_data.pop("date_joined", None) 
     user_data.pop("last_login", None) 
-    lst_usuarios.append(user.__dict__) 
+    lst_usuarios.append(user_data) 
 
 with open("usuarios.json", "w") as resultado: 
     json.dump(lst_usuarios, resultado)
