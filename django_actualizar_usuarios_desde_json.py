@@ -25,6 +25,10 @@ try:
                 user_to_create_or_update.email=data['email']
                 user_to_create_or_update.is_staff=data['is_staff']
                 user_to_create_or_update.is_active=data['is_active']
+                # En caso de querer guardar la contraseña
+                # no guardar así -> user_to_create_or_update.password=data['password']
+                # porque no se guarda como hash, sino como texto plano
+                # así sí: -> user_to_create_or_update.set_password(data['password'])                
             else:
                 print(f"El usuario {data['username']} existe, saltando...")
         else:
