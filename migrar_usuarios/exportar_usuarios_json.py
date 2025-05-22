@@ -1,3 +1,7 @@
+"""
+Exportar usuarios de Django a un archivo JSON.
+"""
+
 import json
 
 from django.contrib.auth import get_user_model

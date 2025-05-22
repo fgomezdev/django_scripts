@@ -1,3 +1,7 @@
+"""
+Importar usuarios a Django desde un archivo JSON.
+"""
+
 import json
 
 from django.contrib.auth import get_user_model
@@ -5,7 +9,7 @@ from django.contrib.auth.models import Group, Permission
 
 User = get_user_model()
 
-actualizar_si_existe = True  # OJO!
+actualizar_si_existe = False  # OJO!
 usuarios_a_excluir = ["admin", "super_admin", "AnonymousUser"]
 grupos_a_excluir = []
 permisos_a_excluir = []
